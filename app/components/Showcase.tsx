@@ -9,6 +9,7 @@ type Project = {
   images?: string[];
   itemClass?: string;
   video?: string;
+  sizes?: string;
 };
 
 type Gallery = {
@@ -37,7 +38,7 @@ const projects: Project[] = [
   {
     name: "UAV Imaging Application for Concrete Crack Detection",
     description: "A drone-based system that captures aerial imagery of structures, automatically detects concrete cracks, and generates repair recommendations from the analysis.",
-    tech: ["ReactJS", "Redux", "Firebase", "NodeJS", "MySQL"],
+    tech: ["ReactJS", "Redux", "Firebase", "NodeJS", "MySQL", "Machine Learning", "Python", "OpenCV"],
     images: [
       "/certificates/AutomaticWallCrackDetection1.jpg",
       "/certificates/AutomaticWallCrackDetection2.jpg",
@@ -51,6 +52,50 @@ const projects: Project[] = [
     tech: ["Python", "Selenium", "Web Scraping", "Automation"],
     images: ["/certificates/DocScraperFlow.png"],
     itemClass: "w-full max-w-2xl aspect-[16/9]",
+  },
+  {
+    name: "Local Hardware Inventory System",
+    description: "Offline Windows desktop inventory & POS system for a hardware/construction supply store, with product management, stock tracking, supplier records, and sales history backed by a local SQLite database.",
+    tech: ["C#", ".NET 8", "WPF", "MVVM", "Entity Framework Core", "SQLite", "WPF-UI"],
+    images: [
+      "/projects/scatInventory1.png",
+      "/projects/scatInventory2.png",
+      "/projects/scatInventory3.png",
+      "/projects/scatInventory4.png",
+      "/projects/scatInventory5.png",
+      "/projects/scatInventory6.png",
+    ],
+    itemClass: "w-80 aspect-[16/10]",
+    sizes: "320px",
+  },
+  {
+    name: "Student Attendance Monitoring System",
+    description: "A Windows desktop app for tracking K-12 student attendance by scanning each student's QR code with a webcam — admins register students (with grade/section), generate per-student QR codes, then run a live camera scanner that records who's present in real time and rolls it up into dashboard stats and reports.",
+    tech: ["C#", ".NET 8", "WPF", "MaterialDesignThemes", "Entity Framework Core 8", "SQLite", "QRCoder", "ZXing.Net", "OpenCvSharp4"],
+    images: [
+      "/projects/Attendance1.png",
+      "/projects/Attendance2.png",
+      "/projects/Attendance3.png",
+      "/projects/Attendance4.png",
+      "/projects/Attendance5.png",
+      "/projects/Attendance6.png",
+    ],
+    itemClass: "w-80 aspect-[16/10]",
+    sizes: "320px",
+  },
+  {
+    name: "Dev Team Status Tracker",
+    description: "A web-based team management and reporting platform that helps software teams track weekly work, project progress, and meeting outcomes. It manages team members, weekly status updates, projects and development phases, meeting notes, and provides a dashboard with progress rollups. The system includes project planning features such as phase tracking, effort estimates, timelines, and Gantt chart visualization, along with Excel and JSON import/export capabilities for easy data management and reporting.",
+    tech: ["C#", ".NET 8", "ASP.NET Core MVC", "Razor", "Entity Framework Core 8", "SQLite", "EPPlus", "Bootstrap", "jQuery"],
+    images: [
+      "/projects/TS1.png",
+      "/projects/TS2.png",
+      "/projects/TS3.png",
+      "/projects/TS4.png",
+      "/projects/TS5.png",
+    ],
+    itemClass: "w-80 aspect-[16/10]",
+    sizes: "320px",
   },
 ];
 
@@ -91,7 +136,7 @@ const speaking: Gallery[] = [
 
 function SubHeading({ children }: { children: React.ReactNode }) {
   return (
-    <h3 className="text-sm font-semibold text-[var(--text)] mb-4">{children}</h3>
+    <h3 className="text-xl font-bold tracking-tight text-[var(--text)] mb-4">{children}</h3>
   );
 }
 
@@ -134,7 +179,7 @@ export default function Showcase() {
               }`}
             >
               <div className="flex items-start justify-between gap-2">
-                <p className="text-sm font-medium text-[var(--text)]">{p.name}</p>
+                <p className="text-sm font-bold text-[var(--text)]">{p.name}</p>
                 {p.link && (
                   <a
                     href={p.link}
@@ -169,6 +214,7 @@ export default function Showcase() {
                   name={p.name}
                   itemClass={p.itemClass}
                   video={p.video}
+                  sizes={p.sizes}
                 />
               )}
             </div>
@@ -179,6 +225,9 @@ export default function Showcase() {
       {/* Awards & Recognition */}
       <div className="mb-12">
         <SubHeading>Awards &amp; Recognition</SubHeading>
+        <p className="text-xs text-[var(--text-muted)] -mt-2 mb-4 max-w-2xl leading-relaxed">
+          Awarded by the Department of Science and Technology (DOST) as Champion of the College-Level Invention Competition in CALABARZON, recognizing excellence in innovation, research, and technology development.
+        </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
           {awards.map((a, i) => (
             <GalleryCard key={i} item={a} />
@@ -189,6 +238,9 @@ export default function Showcase() {
       {/* Speaking */}
       <div>
         <SubHeading>Speaking</SubHeading>
+        <p className="text-xs text-[var(--text-muted)] -mt-2 mb-4 max-w-2xl leading-relaxed">
+          Sharing knowledge and inspiring students through talks on technology, career growth, and continuous learning.
+        </p>
         <div className="grid grid-cols-2 gap-4">
           {speaking.map((s, i) => (
             <GalleryCard key={i} item={s} />
