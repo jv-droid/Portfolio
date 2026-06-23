@@ -4,7 +4,7 @@ export default function About() {
       <h2 className="text-xl font-bold tracking-tight text-[var(--text)] mb-6">About</h2>
       <div className="space-y-4 text-[var(--text-muted)] leading-relaxed">
         <p>
-          I&apos;m a backend-focused software engineer specializing in building solutions with .NET,
+          I&apos;m a backend-focused software engineer with over 6 years of professional experience, specializing in building solutions with .NET,
           C#, and SQL. I work on projects including scalable enterprise applications, database-driven
           systems, automation tools, and AI-powered solutions.
         </p>

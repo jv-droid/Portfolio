@@ -13,7 +13,7 @@ const jobs = [
   },
   {
     role: "Software Developer",
-    company: "Octal Philippines Inc.",
+    company: "ABS-CBN Corporation",
     period: "Nov 2022 – Dec 2023",
     current: false,
   },
