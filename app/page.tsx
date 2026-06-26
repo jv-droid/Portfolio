@@ -6,7 +6,7 @@ import Skills from "./components/Skills";
 import Showcase from "./components/Showcase";
 import Education from "./components/Education";
 import Certifications from "./components/Certifications";
-import TradingCertifications from "./components/TradingCertifications";
+import BeyondSoftwareEngineering from "./components/BeyondSoftwareEngineering";
 import Contact from "./components/Contact";
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
         <Skills />
         <Showcase />
         <Certifications />
-        <TradingCertifications />
+        <BeyondSoftwareEngineering />
         <Education />
         <Contact />
       </main>
