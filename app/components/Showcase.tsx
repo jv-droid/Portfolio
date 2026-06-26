@@ -97,6 +97,18 @@ const projects: Project[] = [
     itemClass: "w-80 aspect-[16/10]",
     sizes: "320px",
   },
+  {
+    name: "Legislative Information & Management System",
+    description: "A secure, web-based platform that modernizes the legislative operations of the Sangguniang Bayan of Odiongan. LIMS enhances transparency, streamlines legislative processes, and centralizes records through a legislative workflow engine, audit trail, analytics dashboard, secure document repository, and an integrated citizen portal with public consultation and feedback. Access is governed by ASP.NET Core Identity with role-based authorization, cookie authentication, and CSRF protection.",
+    tech: ["C#", ".NET 8", "ASP.NET Core 8 MVC", "Entity Framework Core 8", "ASP.NET Core Identity", "RBAC", "Razor Views", "Bootstrap 5", "AdminLTE", "jQuery"],
+    images: [
+      "/projects/Legislative1.png",
+      "/projects/Legislative2.png",
+      "/projects/Legislative3.png",
+    ],
+    itemClass: "w-80 aspect-[16/10]",
+    sizes: "320px",
+  },
 ];
 
 // TODO: Update titles/dates to match each achievement.
