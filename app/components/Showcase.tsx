@@ -109,6 +109,17 @@ const projects: Project[] = [
     itemClass: "w-80 aspect-[16/10]",
     sizes: "320px",
   },
+  {
+    name: "OneRomblon App",
+    description: "A cross-platform Flutter app for the province of Romblon that pulls real-time news and announcements from an ASP.NET Core REST API and displays them in a clean, categorized feed — alongside modules for government services, tourism, education, emergency info, and a citizen directory. Built with a feature-first architecture, consuming JSON over HTTP.",
+    tech: ["Flutter", "Dart", "Material Design", "http", "ASP.NET Core Web API", ".NET", "REST API", "JSON"],
+    images: [
+      "/projects/prov.jpg",
+      "/projects/prov1.jpg",
+      "/projects/prov2.jpg",
+      "/projects/prov3.jpg",
+    ],
+  },
 ];
 
 // TODO: Update titles/dates to match each achievement.
